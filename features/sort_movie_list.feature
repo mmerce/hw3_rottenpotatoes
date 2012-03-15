@@ -25,13 +25,28 @@ Scenario: sort movies alphabetically
   Given I am on the RottenPotatoes home page
   When I follow "Movie Title"
   Then I should be on the RottenPotatoes home page
-  And I should see "Chocolat" before "The Terminator"
-  And I should see "The Help" before "When Harry Met Sally"
+  And I should see "2001: A Space Odyssey" before "Aladdin"
+  And I should see "Aladdin" before "Amelie"
+  And I should see "Amelie" before "Chicken Run"
+  And I should see "Chicken Run" before "Chocolat"
+  And I should see "Chocolat" before "Raiders of the Lost Ark"
+  And I should see "Raiders of the Lost Ark" before "The Help"
+  And I should see "The Help" before "The Incredibles"
+  And I should see "The Incredibles" before "The Terminator"
+  And I should see "The terminator" before "When Harry Met Sally"
+
 
 Scenario: sort movies in increasing order of release date
   # your steps here
   Given I am on the RottenPotatoes home page
   When I follow "Release Date"
   Then I should be on the RottenPotatoes home page
-  And I should see "The Terminator" before "Chocolat"
-  And I should see "When Harry Met Sally" before "The Help"
+  And I should see "2001: A Space Odyssey" before "Raiders of the Lost Ark"
+  And I should see "Raiders of the Lost Ark" before "The Terminator"
+  And I should see "The Terminator" before "When Harry Met Sally"
+  And I should see "When Harry Met Sally" before "Aladdin"
+  And I should see "Aladdin" before "Chicken Run"
+  And I should see "Chicken Run" before "Chocolat"
+  And I should see "Chocolat" before "Amelie"
+  And I should see "Amelie" before "The Incredibles"
+  And I should see "The Incredibles" before "The Help"
