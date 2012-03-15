@@ -14,8 +14,7 @@ end
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   #  ensure that that e1 occurs before e2.
   #  page.content  is the entire content of the page as a string.
-  regexp = Regexp.new(".*?"+e1+".*?"+e2)
-  assert (!regexp.match(page.body))
+  assert(page.body.index(e1) < page.body.index(e2), e1+".*"+e2+" not found")
 end
 
 
