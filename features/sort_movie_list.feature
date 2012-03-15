@@ -22,11 +22,16 @@ Background: movies have been added to database
   And I am on the RottenPotatoes home page
 
 Scenario: sort movies alphabetically
-  #Given I am on the movies home page
-  #When I follow "Title"
-  #Then I should be on the movies home page
-  #And I should see "Chocolat" before "The Terminator"
-  #And I should see "The Help" before "When Harry Met Sally" 
+  Given I am on the RottenPotatoes home page
+  When I follow "Movie Title"
+  Then I should be on the RottenPotatoes home page
+  And I should see "Chocolat" before "The Terminator"
+  And I should see "The Help" before "When Harry Met Sally"
 
 Scenario: sort movies in increasing order of release date
   # your steps here
+  Given I am on the RottenPotatoes home page
+  When I follow "Release Date"
+  Then I should be on the RottenPotatoes home page
+  And I should see "The Terminator" before "Chocolat"
+  And I should see "When Harry Met Sally" before "The Help"
